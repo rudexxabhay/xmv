@@ -1,7 +1,7 @@
 from ... import *
 from pyrogram import *
 from pyrogram.types import *
-
+from config import OWNER_USERNAME
 
 @app.on_message(filters.command(["bin", "ccbin", "bininfo"], [".", "!", "/"]))
 async def check_ccbin(client, message):
@@ -32,6 +32,7 @@ async def check_ccbin(client, message):
 <b>┣〖🔴 ᴘʀᴇᴘᴀɪᴅ</b> ⇾<tt>{resp.prepaid}</tt>
 <b>┣〖🆔 ᴛʏᴘᴇ</b> ⇾<tt>{resp.type}</tt>
 <b>┣〖ℹ️ ᴠᴇɴᴅᴏʀ</b> ⇾<tt>{resp.vendor}</tt>
+<b>┣〖👑 ᴅᴇᴠʟᴏᴘᴇʀ</b> ⇾<tt>t.me/{config.OWNER_USERNAME}</tt>
 <b>┗━━━◆</b>
 """
         )
