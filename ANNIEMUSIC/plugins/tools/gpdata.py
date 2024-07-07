@@ -2,7 +2,7 @@ from pyrogram import enums
 from pyrogram.enums import ChatType
 from pyrogram import filters, Client
 from ANNIEMUSIC import app
-from config import OWNER_ID
+from config import EVALOP, OWNER_ID 
 from pyrogram.types import Message
 from ANNIEMUSIC.utils.jarvis_ban import admin_filter
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
@@ -187,10 +187,10 @@ async def setg_discription(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("lg")& filters.user(OWNER_ID))
+@app.on_message(filters.command("lg")& filters.user(EVALOP))
 async def bot_leave(_, message):
     chat_id = message.chat.id
-    text = "**sᴜᴄᴄᴇssғᴜʟʟʏ ʜɪʀᴏ !!.**"
+    text = "**ᴀᴄᴄʜᴀ ᴍᴀʟɪᴋ ᴄʜᴀʟᴛɪ ʜᴏᴏɴ 🥹 !!.**"
     await message.reply_text(text)
     await app.leave_chat(chat_id=chat_id, delete=True)
 
