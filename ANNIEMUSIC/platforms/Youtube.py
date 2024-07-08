@@ -5,7 +5,7 @@ from typing import Union
 
 from pyrogram import Client
 from pytgcalls import PyTgCalls, idle
-from pytgcalls.types import InputAudioStream
+from pytgcalls.types import MediaStream
 
 import yt_dlp
 from pyrogram.enums import MessageEntityType
