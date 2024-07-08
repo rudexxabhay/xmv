@@ -29,7 +29,6 @@ numpy
 opencv-python
 pillow
 psutil
-pickledb
 pycountry
 pydub
 pyfiglet
