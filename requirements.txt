@@ -22,7 +22,6 @@ hachoir
 heroku3
 httpx==0.27.0
 img2pdf
-instaloader
 lexica-api
 motor 
 MukeshAPI
@@ -31,9 +30,7 @@ opencv-python
 pillow
 psutil
 pickledb
-pornhub-api==0.3.0
 pycountry
-pycryptodome
 pydub
 pyfiglet
 pykeyboard
