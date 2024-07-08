@@ -12,7 +12,7 @@ MUST_JOIN = "KGF_ROCY"
 async def must_join_channel(app: Client, msg: Message):
     if not MUST_JOIN:
         return
-    
+
     try:
         # Check if the user is a participant of the MUST_JOIN channel
         try:
@@ -24,7 +24,7 @@ async def must_join_channel(app: Client, msg: Message):
             else:
                 chat_info = await app.get_chat(MUST_JOIN)
                 link = chat_info.invite_link
-            
+
             # Send a message to the user prompting them to join the channel
             try:
                 await msg.reply_photo(
