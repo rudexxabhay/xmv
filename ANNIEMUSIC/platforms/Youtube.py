@@ -2,8 +2,10 @@ import asyncio
 import os
 import re
 from typing import Union
-from pytgcalls.types.input_stream import InputStream
-from pytgcalls.types.input_stream import InputAudioStream
+
+from pyrogram import Client
+from pytgcalls import PyTgCalls, idle
+from pytgcalls.types import InputAudioStream
 
 import yt_dlp
 from pyrogram.enums import MessageEntityType
@@ -346,3 +348,28 @@ class YouTubeAPI:
             direct = True
             downloaded_file = await loop.run_in_executor(None, audio_dl)
         return downloaded_file, direct
+
+client = Client(__name__)
+
+# Initialize the PyTgCalls client
+app = PyTgCalls(client)
+
+# Define the chat ID
+chat_id = -1002094142057
+
+async def main():
+    await app.start()
+    
+    # Join the group call with the media stream
+    await app.join_group_call(
+        chat_id,
+        InputAudioStream(
+            'http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4'
+        )
+    )
+    
+    # Keep the script running
+    await idle()
+
+# Start the client and run the main function
+client.run(main())
